@@ -1,0 +1,129 @@
+@mixin tablet 
+  @media all and (max-width: 780px) 
+    @content
+
+@mixin mobile 
+  @media all and (max-width: 420px) 
+    @content
+
+@mixin mobileSmall 
+  @media all and (max-width: 340px) 
+    @content
+
+body
+  background-color: #e0e0e0
+
+::selection
+  background: #009688
+  color: white
+::-moz-selection 
+  background: #009688
+  color: white
+
+//---TOP NavBar Styling---//
+nav
+  background-color: #00695C
+  
+nav .brand-logo
+  cursor: default
+  color: #FAFAFA
+  @include mobile
+    font-size: 1.7rem
+  @include mobileSmall
+    font-size: 1.5rem
+    
+
+.button-collapse
+  display: block !important
+  margin: 0 !important
+  i
+    font-size: 33px !important
+  
+#nav-mobile, 
+.valign-wrapper,
+.button-collapse
+  height: 100% !important
+  
+//---SIDE NavBar Styling---//
+
+.side-nav
+  background-color: #BDBDBD
+  li
+    a
+      
+      color: #424242
+      &:hover
+        background-color: #00695C
+        color: #fafafa
+  
+::-webkit-scrollbar
+  display: none
+
+//---Card---//
+.container .row
+  margin: 0
+
+.popUpCard
+  margin-top: 10%
+  @include tablet
+    width: 100%
+
+.row .col.s6
+  @include tablet
+    width: 70%
+  @include mobile
+    width: 80%
+  @include mobileSmall
+    width: 90%
+    
+.row .col.offset-s3
+  @include tablet
+    margin-left: 15%
+  @include mobile
+    margin-left: 10%
+  @include mobileSmall
+    margin-left: 5%
+
+.card .card-title
+  @include tablet
+    font-size: 19px
+
+.card .card-content p
+  @include tablet
+    font-size: 12px
+
+.coolButton,
+.superCoolButton
+  width: 49%
+  display: inline-block !important
+  &:hover
+    color: #ffc107 !important
+  
+.superCoolButton
+  text-align: right
+  margin: 0 !important
+  
+//---DISPLAYER---//
+
+.displayer
+  width: 100%
+
+.priceUSD,
+.priceEUR,
+.priceGBP
+  color: #212121
+  
+  
+.priceUSD
+  margin: 10% 0 0 0
+  font-size: 33px
+  
+.priceEUR,
+.priceGBP
+  display: inline-block
+  margin: 3% 5%
+  font-size: 21px
+    
+.change
+  font-size: 25px
+  color: blue

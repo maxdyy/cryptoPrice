@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>cryptoPrice</title>
+  <meta name="author" content="Maksym Dmukhovskyy">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center name truncate"></a>
+
+      <ul id="nav-mobile" class="left">
+        <li><a href="#" data-activates="slide-out" class="button-collapse pulseMenu pulse cyan darken-4"><i class="large material-icons">menu</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul id="slide-out" class="side-nav">
+    <li><a href="#!" class="btc">Bitcoin</a></li>
+    <li><a href="#!" class="eth">Ethereum</a></li>
+    <li><a href="#!" class="xrp">Ripple</a></li>
+    <li><a href="#!" class="ltc">Litecoin</a></li>
+    <li><a href="#!" class="etc">Ethereum Classic</a></li>
+    <li><a href="#!" class="dash">Dash</a></li>
+    <li><a href="#!" class="xem">NEM</a></li>
+    <li><a href="#!" class="xmr">Monero</a></li>
+    <li><a href="#!" class="iot">IOTA</a></li>
+  </ul>
+
+  <div class="container popUpCard">
+    <div class="row">
+          <div class="col s6 offset-s3">
+            <div class="card teal lighten-1">
+              <div class="card-content grey-text text-darken-2 grey lighten-4">
+                <span class="card-title">Cryptocurrency Value App</span>
+                <p>This web app was created with some Sunday spare time, MaterializeCSS, SASS, Jquery and coinmarketcap API. </p>
+              </div>
+              <div class="card-action">
+                <a data-activates="slide-out" class="button-collapse coolButton grey-text text-lighten-4" href="#">Cool</a>
+                <a class="superCoolButton grey-text text-lighten-4" href="#">Super Cool</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <div class="displayer">
+    <div class="priceUSD center-align"></div>
+    <div class="europePrice center-align">
+        <div class="priceEUR"></div>
+        <div class="priceGBP"></div>
+    </div>
+    <div class="change center-align"></div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
