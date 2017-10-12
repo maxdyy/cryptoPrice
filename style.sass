@@ -10,19 +10,21 @@
   @media all and (max-width: 340px) 
     @content
 
+html,
 body
   background-color: #e0e0e0
+  margin: 0
 
 ::selection
-  background: #009688
+  background: #311b92
   color: white
 ::-moz-selection 
-  background: #009688
+  background: #311b92
   color: white
 
 //---TOP NavBar Styling---//
 nav
-  background-color: #00695C
+  background-color: #311b92
   
 nav .brand-logo
   cursor: default
@@ -33,28 +35,8 @@ nav .brand-logo
     font-size: 1.5rem
     
 
-.button-collapse
-  display: block !important
-  margin: 0 !important
-  i
-    font-size: 33px !important
-  
-#nav-mobile, 
-.valign-wrapper,
-.button-collapse
-  height: 100% !important
-  
 //---SIDE NavBar Styling---//
 
-.side-nav
-  background-color: #BDBDBD
-  li
-    a
-      
-      color: #424242
-      &:hover
-        background-color: #00695C
-        color: #fafafa
   
 ::-webkit-scrollbar
   display: none
@@ -64,6 +46,8 @@ nav .brand-logo
   margin: 0
 
 .popUpCard
+  opacity: 1
+  display: none
   margin-top: 10%
   @include tablet
     width: 100%
@@ -92,38 +76,40 @@ nav .brand-logo
   @include tablet
     font-size: 12px
 
-.coolButton,
-.superCoolButton
+.quickPrice,
+.converter
+  cursor: pointer
   width: 49%
   display: inline-block !important
+  margin: 0 !important
   &:hover
     color: #ffc107 !important
-  
-.superCoolButton
+
+.converter
   text-align: right
-  margin: 0 !important
-  
-//---DISPLAYER---//
 
-.displayer
+// Price card //
+
+.priceWrap
+  height: 100%
   width: 100%
-
-.priceUSD,
-.priceEUR,
-.priceGBP
-  color: #212121
-  
-  
-.priceUSD
-  margin: 10% 0 0 0
-  font-size: 33px
-  
-.priceEUR,
-.priceGBP
-  display: inline-block
-  margin: 3% 5%
-  font-size: 21px
-    
-.change
-  font-size: 25px
-  color: blue
+  display: flex
+  margin-top: 100px
+  .priceContainer
+    background-color: #fff
+    height: 200px
+    margin: auto
+    .selectorWrap
+      width: 100%
+      height: 65%
+      display: flex
+      .input-field
+        margin: auto
+    .buttonWrap
+      width: 100%
+      height: 35%
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      .btn
+        margin-right: 11px
