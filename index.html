@@ -16,44 +16,66 @@
     </div>
   </nav>
 
-
-  <div class="container popUpCard">
-    <div class="row">
-          <div class="col s6 offset-s3">
-            <div class="card deep-purple darken-4">
-              <div class="card-content grey-text text-darken-2 grey lighten-4">
-                <span class="card-title">Cryptocurrency Value App</span>
-                <p>This web app was created with some Sunday spare time, MaterializeCSS, SASS, Jquery and Digital Currency API. </p>
-              </div>
-              <div class="card-action">
-                <a class="quickPrice grey-text text-lighten-4">Quick Price</a>
-                <a class="converter grey-text text-lighten-4">Converter</a>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-
   <div class="row priceWrap">
-    <div class='priceContainer col s10 m8 l8 z-depth-3'>
+    <div class='priceContainer col s10 m8 l6 z-depth-3'>
       <div class='selectorWrap'>
         <div class="input-field col s10">
           <select id="cryptoCurPri">
-            <option value="btc" selected>Bitcoin</option>
+            <option value="BTC" selected>Bitcoin</option>
+            <option value="ETH">Ethereum</option>
+            <option value="LTC">Litecoin</option>
             <option value="XRP">Ripple</option>
-            <option value="3">Option 3</option>
+            <option value="XMR">Monero</option>
+            <option value="NEO">NEO</option>
+            <option value="DASH">Dash</option>
+            <option value="ZEC">Zcash</option>
+            <option value="IOT">IOTA</option>
+            <option value="LSK">Lisk</option>
+            <option value="ETC">Ethereum Classic</option>
+            <option value="EOS">EOS</option>
+            <option value="GNT">Golem</option>
+            <option value="DOGE">Dogecoin</option>
+            <option value="SC">Siacoin</option>
+            <option value="BNT">Bancor Network Token</option>
+            <option value="WAVES">Waves</option>
+            <option value="STRAT">Stratis</option>
+            <option value="GAS">Gas</option>
+            <option value="BCH">Bitcoin Cash</option>
+            <option value="SNT">Status</option>
+            <option value="SBD">Steem Dollars</option>
           </select>
         </div>
         <div class="input-field col s10">
           <select id="curPri">
-            <option value="usd" selected>US Dollar</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+            <option value="USD" selected>US Dollar</option>
+            <option value="GBP">Pound</option>
+            <option value="EUR">Euro</option>
+            <option value="CHF">Swiss Franc</option>
+            <option value="AUD">Australian Dollar</option>
+            <option value="CAD">Canadian Dollar</option>
+            <option value="RUB">Russian Ruble</option>
           </select>
         </div>
       </div>
       <div class="buttonWrap">
         <a class="waves-effect waves-light btn grey darken-4 submit">Submit</a>
+        <div class="responce">
+          <div class="preloader-wrapper small active scale-transition">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <div class="dataWrap">
+            <div class="value"></div>
+            <div class="percent"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
