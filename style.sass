@@ -28,9 +28,11 @@ nav
   background-color: #311b92
 
 nav .brand-logo
+  margin-left: 15px
   cursor: default
   color: #FAFAFA
   @include mobile
+    margin-left: 0
     font-size: 1.7rem
   @include mobileSmall
     font-size: 1.5rem
@@ -97,8 +99,8 @@ input[type="text"]
 input[type="text"]:focus
   outline: none
   font-size: 0px;
-  transform: scale(0);
-  transition: 0s;
+//   transform: scale(0);
+//   transition: 0s;
 
 .select-wrapper input.select-dropdown
   transition: 0s;
@@ -121,11 +123,12 @@ input[type="text"]:focus
     justify-content: center
   .preloader-wrapper
     position: absolute
-    top: calc(65% - 18px)
-    left: 20%
+    top: calc(50% - 18px)
+    left: 20px
     opacity: 0
     display: none
     @include mobileSmall
+      top: calc(65% - 18px)
       left: calc(50% - 18px)
     .spinner-green, .spinner-green-only
       border-color: #673ab7
