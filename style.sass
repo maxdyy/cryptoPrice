@@ -81,12 +81,20 @@ nav .brand-logo
   @include mobileSmall
     font-size: 12px
 
+
+// removing ios blinking cursor on text areas //
 select
   appearance: none
 
-// removing blicking caret on ios//
 input,
 input:focus
+  outline: none
+
+input[type="text"]
+  color: transparent
+  text-shadow: 0 0 0 #000
+
+input[type="text"]:focus
   outline: none
   font-size: 0px;
   transform: scale(0);
@@ -94,7 +102,8 @@ input:focus
 
 .select-wrapper input.select-dropdown
   transition: 0s;
-//-------//
+
+//--------------------------//
 
 .responce
   height: 100%
