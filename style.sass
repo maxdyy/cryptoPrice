@@ -79,21 +79,22 @@ nav .brand-logo
   color: #212121
   font-size: 14px
   @include mobileSmall
-    font-size: 13px
+    font-size: 12px
 
 select
   appearance: none
 
+// removing blicking caret on ios//
 input,
 input:focus
   outline: none
+  font-size: 0px;
+  transform: scale(0);
+  transition: 0s;
 
-input[type="text"]
-  color: transparent
-  text-shadow: 0 0 0 #000
-
-input[type="text"]:focus
-  outline: none
+.select-wrapper input.select-dropdown
+  transition: 0s;
+//-------//
 
 .responce
   height: 100%
