@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 var coinAPI = [];
-var crypt = "BTC";
+var crypt = "bitcoin";
 var cur = "USD";
 
 var priceBTN = $('.quickPrice');
@@ -28,29 +28,33 @@ function hidePopup() {
 }
 
 function getCoinPrice(crypt, cur) {
-  $.ajax({
-      url: 'https://bravenewcoin-v1.p.mashape.com/ticker?coin='+ crypt +'&show='+ cur +'',
-      type: 'POST',
-      data: {},
-      datatype: 'json',
-      success: function(data) { 
-        coinAPI = JSON.parse(data);
-        displayResult(coinAPI);
-      },
-      error: function(err) { alert(err); },
-      beforeSend: function(xhr) {
-      xhr.setRequestHeader("X-Mashape-Authorization", "7eZ7NbbmF6mshfvBhQuXUdqgaAclp17w3hsjsnX2QSB8J7M6Pi");
-      }
+  // $.ajax({
+  //     url: 'https://bravenewcoin-v1.p.mashape.com/ticker?coin='+ crypt +'&show='+ cur +'',
+  //     type: 'POST',
+  //     data: {},
+  //     datatype: 'json',
+  //     success: function(data) { 
+  //       coinAPI = JSON.parse(data);
+  //       displayResult(coinAPI);
+  //     },
+  //     error: function(err) { alert(err); },
+  //     beforeSend: function(xhr) {
+  //     xhr.setRequestHeader("X-Mashape-Authorization", "7eZ7NbbmF6mshfvBhQuXUdqgaAclp17w3hsjsnX2QSB8J7M6Pi");
+  //     }
+  // });
+
+  $.getJSON('https://api.coinmarketcap.com/v1/ticker/' + crypt + '/?convert=' + cur + '', function callbackData(data) {
+    coinAPI = data;
+    displayResult(coinAPI[0], cur);
   });
 }
 
-function getConvertion() {
-
-}
 
 function displayResult(coinAPI) {
-  valueText = Number(coinAPI.last_price).toFixed(3);
-  percentVal = coinAPI.vol_24hr_pcnt;
+  internalCur = cur.toLowerCase();
+  price = 'price_' + internalCur + '';
+  valueText = Number(coinAPI[price]).toFixed(3);
+  percentVal = coinAPI.percent_change_24h;
   percentState = 0;
   if (percentVal.charAt(0) != '-') {
     percentState = '+ ';
@@ -60,7 +64,7 @@ function displayResult(coinAPI) {
   value.text(cur + ' ' + valueText);
   percent.text(percentState + ' ' +percentVal + '%');
   loading = false;
-  preloader.fadeTo(500, 0, function(){
+  preloader.fadeTo(300, 0, function(){
     preloader.hide();
     dataWrap.show;
     dataWrap.fadeTo(500, 1);

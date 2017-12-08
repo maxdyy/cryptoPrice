@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>cryptoPrice</title>
   <meta name="author" content="Maksym Dmukhovskyy">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css" />
   <link rel="stylesheet" type="text/css" href="style.css" />
-
   <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png">
   <link rel="shortcut icon" type="image/png" href="images/favicon-32x32.png">
   <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
@@ -17,40 +17,40 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-iphone-retina.png">
   <link rel="apple-touch-icon" sizes="167x167" href="images/touch-icon-ipad-retina.png">
 </head>
+
 <body>
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center name truncate">cryptoPrice</a>
     </div>
   </nav>
-
   <div class="row priceWrap">
     <div class='priceContainer col s10 m8 l6 z-depth-3'>
       <div class='selectorWrap'>
         <div class="input-field col s10">
           <select id="cryptoCurPri">
-            <option value="BTC" selected>Bitcoin</option>
-            <option value="ETH">Ethereum</option>
-            <option value="LTC">Litecoin</option>
-            <option value="XRP">Ripple</option>
-            <option value="XMR">Monero</option>
+            <option value="Bitcoin" selected>Bitcoin</option>
+            <option value="Ethereum">Ethereum</option>
+            <option value="Litecoin">Litecoin</option>
+            <option value="Ripple">Ripple</option>
+            <option value="Monero">Monero</option>
             <option value="NEO">NEO</option>
-            <option value="DASH">Dash</option>
-            <option value="ZEC">Zcash</option>
-            <option value="IOT">IOTA</option>
-            <option value="LSK">Lisk</option>
-            <option value="ETC">Ethereum Classic</option>
+            <option value="Dash">Dash</option>
+            <option value="Zcash">Zcash</option>
+            <option value="IOTA">IOTA</option>
+            <option value="Lisk">Lisk</option>
+            <option value="ethereum-classic">Ethereum Classic</option>
             <option value="EOS">EOS</option>
-            <option value="GNT">Golem</option>
-            <option value="DOGE">Dogecoin</option>
-            <option value="SC">Siacoin</option>
-            <option value="BNT">Bancor Network Token</option>
-            <option value="WAVES">Waves</option>
-            <option value="STRAT">Stratis</option>
-            <option value="GAS">Gas</option>
-            <option value="BCH">Bitcoin Cash</option>
-            <option value="SNT">Status</option>
-            <option value="SBD">Steem Dollars</option>
+            <option value="golem-network-tokens">Golem</option>
+            <option value="Dogecoin">Dogecoin</option>
+            <option value="Siacoin">Siacoin</option>
+            <option value="Bancor">Bancor Network Token</option>
+            <option value="Waves">Waves</option>
+            <option value="Stratis">Stratis</option>
+            <option value="Gas">Gas</option>
+            <option value="bitcoin-cash">Bitcoin Cash</option>
+            <option value="Status">Status</option>
+            <option value="steem">Steem</option>
           </select>
         </div>
         <div class="input-field col s10">
@@ -72,9 +72,11 @@
             <div class="spinner-layer spinner-green-only">
               <div class="circle-clipper left">
                 <div class="circle"></div>
-              </div><div class="gap-patch">
+              </div>
+              <div class="gap-patch">
                 <div class="circle"></div>
-              </div><div class="circle-clipper right">
+              </div>
+              <div class="circle-clipper right">
                 <div class="circle"></div>
               </div>
             </div>
@@ -87,10 +89,17 @@
       </div>
     </div>
   </div>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-<script src="script.js"></script>
+  <footer>
+    <a target="_blank" href="https://github.com/maxdyy/cryptoPrice">
+      <i class="fa fa-github fa-lg" aria-hidden="true"></i>
+    </a>
+    <a target="_blank" href="https://coinmarketcap.com/api/">
+      <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+    </a>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
