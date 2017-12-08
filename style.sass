@@ -10,6 +10,10 @@
   @media all and (max-width: 340px) 
     @content
 
+@mixin footerLim
+  @media all and (max-height: 490px) 
+    @content
+
 html,
 body
   background-color: #e0e0e0
@@ -157,6 +161,8 @@ footer
   justify-content: center
   align-items: center
   background-color: #424242
+  @include footerLim
+    display: none
   i
     margin: 0 7px
     cursor: pointer
